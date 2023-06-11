@@ -3,12 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-#Rufo
+
+# Rufo
 gem "rufo"
 
-#erb beautifier
-gem 'htmlbeautifier'
-
+# erb beautifier
+gem "htmlbeautifier"
 
 # Standar gem
 gem "standard", group: %i[development test]
@@ -87,3 +87,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "devise", "~> 4.9"
