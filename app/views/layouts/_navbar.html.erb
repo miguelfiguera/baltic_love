@@ -14,11 +14,16 @@
         </li>
         <li class="nav-item">
           <%if admin_signed_in?%>
+            <%=link_to 'Admin-Dashboard',admin_authenticated_root_url,class:"nav-link active"%>
           <%else%>
             <%=link_to 'Admin-Dashboard',new_admin_session_url,class:"nav-link active"%>
           <%end%>
+        </li>
+        <%if admin_signed_in?%>
+          <li>               <%=link_to 'Log Out',destroy_admin_session_url, class:"nav-link active"%>
           </li>
-        </ul>
-      </div>
+        <%end%>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
