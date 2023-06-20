@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :admins
-  devise_for :users
+  resources :users, only: [:index,:show,:create,:new]
   get "static_pages/home"
   get "static_pages/features", as: :page_features
+
+
 
   devise_scope :admin do
     authenticated :admin do
