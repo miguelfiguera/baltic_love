@@ -1,22 +1,19 @@
 <%= provide(:title,'Features')%>
-
-<div class="container shadow-lg pb-5">
+<div class="container shadow-lg pb-5 pt-4">
   <h1 class="text-center mt-5 mb-5"> Meet Latvia and Latvian Beauties!</h1>
   <div class="container">
     <%= render 'static_pages/feature_helpers/landscapes'%>
     <%=render'static_pages/feature_helpers/landimage' %>
     <%= render 'static_pages/feature_helpers/culture'%>
-        <div class=" d-flex flex-wrap justify-content-center mb-5">
-    <%=image_tag("rigaold",size:"800x500")%>
+    <div class=" d-flex flex-wrap justify-content-center mb-5">
+      <%=image_tag("rigaold",size:"800x500")%>
     </div>
     <%= render 'static_pages/feature_helpers/food'%>
     <div class="d-flex flex-wrap justify-content-center mb-5">
-    <%= image_tag('latvian-food',size:"600x400",class:'mx-2 my-3')%>
+      <%= image_tag('latvian-food',size:"600x400",class:'mx-2 my-3')%>
     </div>
     <%= render 'static_pages/feature_helpers/natural_beauty'%>
   </div>
   <div class="container-fluid">        <%=render'static_pages/feature_helpers/naturalimg' %>
+  </div>
 </div>
-</div>
-
-
