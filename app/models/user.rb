@@ -7,5 +7,4 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :last_name, presence: true
   validates :phone, presence: true
-  validates :phone, with: /\d{10}/
 end
