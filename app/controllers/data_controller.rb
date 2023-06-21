@@ -25,7 +25,7 @@ class DataController < ApplicationController
 
     respond_to do |format|
       if @datum.save
-        format.html { redirect_to datum_url(@datum), notice: "Datum was successfully created." }
+        format.html { redirect_to root_path, notice: "Datum was successfully created." }
         format.json { render :show, status: :created, location: @datum }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +65,6 @@ class DataController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def datum_params
-      params.fetch(:datum, {})
+      params.require(:datum).permit(:email, :name , :last_name, :phone, :country, :package, :question)
     end
 end

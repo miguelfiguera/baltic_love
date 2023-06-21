@@ -1,4 +1,8 @@
-<%= form_with(model: datum) do |form| %>
+  <div class="col container mx-auto">
+
+<div class="container shadow-lg pb-3 pt-3 border border-dark rounded-4" style='max-width: 600px'>
+
+<%= form_with(model: datum) do |f| %>
   <% if datum.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(datum.errors.count, "error") %> prohibited this datum from being saved:</h2>
@@ -11,7 +15,6 @@
     </div>
   <% end %>
 
-  <div>
 <%=f.label :email, 'Email', class:'form-label'%>
 <%=f.email_field :email, placeholder: "example@mail.com",class:'form-control', required: true %>
 <%=f.label :name, 'Name', class:'form-label' %>
@@ -19,15 +22,31 @@
 <%=f.label :last_name, 'Last name', class:'form-label' %>
 <%=f.text_field :last_name,class:'form-control' %>
 <%=f.hidden_field :country, value: 'USA' %>
-<%=f.hidden_field :package, value: 'V I P' %>
+
+
 <%=f.label :phone, 'Phone', class:'form-label' %>
 <%=f.text_field :phone,class:'form-control' %>
 <%=f.label :question, 'What are you looking for in a partner?', class:'form-label' %>
 <%=f.text_field :question,class:'form-control' %>
+<br>
+
+<div class="form-check mx-auto">
+
+<%=f.radio_button :package, 'Meet & Greet', class:'form-check-input border border-dark'%>
+<%= f.label :package, "Select Meet & Greet",class:'form-check-label' %>
+</div>
+<div class="form-check">
+
+<%=f.radio_button :package, 'V I P', class:'form-check-input border border-dark' %>
+<%= f.label :package, "Select V I P",class:'form-check-label' %>
+</div>
+
+
   <div class="container d-flex justify-content-center my-3 col-3">
 
 <%=f.submit 'Submit',class:' btn text-light',style:'background-color:rgb(212,15,174); scale:1.25' %>
 <%=link_to 'Cancel', static_pages_home_url, class:'btn btn-danger text-light ms-5', style:'scale:1.25;'%>
+  </div>
 
   </div>
 <% end %>
