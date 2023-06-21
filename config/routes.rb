@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :data
   devise_for :admins
   resources :users, only: [:index, :create, :new]
   get "static_pages/home"

@@ -1,7 +1,17 @@
-<div class="col container mx-auto">
+<%= form_with(model: datum) do |form| %>
+  <% if datum.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(datum.errors.count, "error") %> prohibited this datum from being saved:</h2>
 
-<div class="container shadow-lg pb-3" style='max-width: 400px'>
-<%=form_with model: @user do |f|%>
+      <ul>
+        <% datum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
 <%=f.label :email, 'Email', class:'form-label'%>
 <%=f.email_field :email, placeholder: "example@mail.com",class:'form-control', required: true %>
 <%=f.label :name, 'Name', class:'form-label' %>
@@ -20,7 +30,4 @@
 <%=link_to 'Cancel', static_pages_home_url, class:'btn btn-danger text-light ms-5', style:'scale:1.25;'%>
 
   </div>
-
-<%end%>
-</div>
-</div>
+<% end %>
