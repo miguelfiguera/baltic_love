@@ -1,5 +1,5 @@
 <%= provide(:title, "Baltic Love") %>
-
+<%=render 'pictures'%>
 
 <%= render "main" %>
 
@@ -15,6 +15,16 @@
         <%=render 'vip'%>
 
   </div>
+
+
+<div class="row">
+
+<%=render 'images'%>
+
+</div>
+
+
+
   <div class="container d-flex justify-content-center">
 <%=link_to 'Sign In', new_datum_url, data:{turbo_frame: 'meetgreet_form'},class:'btn text-light mx-auto mb-3 shadow-lg',style: 'background-color:rgb(212,15,174); scale:1.5'%> 
 </div>
