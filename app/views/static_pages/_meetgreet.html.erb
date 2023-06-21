@@ -1,0 +1,11 @@
+  <h2 class="text-center"> Meet & Greet package!</h2>
+
+  <p>Visit our beautiful city and attend a traditionally Latvian themed party with over 20 single women willing to meet their Prince Charming. A 3 day experience with fellow Americans.</p>
+  <ul>
+  <li> <strong>Day 1.</strong> Afer you have arrived and checked into a hotel we will take you on a quick tour to show you The Old Town, grab a bite to eat and then let you rest and prepare for your big day</li>
+  <li><strong>Day 2.</strong> Time to party! Food, drinks, Russian Bath House and beautiful women. It's time to make a connection that will last a lifetime.</li>
+  <li><strong>Day 3.</strong> Date night. After getting to know the beautiful potential girlfriend it's time to take her on your first date and establish a deeper connection.</li>
+  </ul>
+<div class="container d-flex justify-content-center">
+<%=link_to 'Meet & Greet', new_user_path, data:{turbo_frame: 'meetgreet_form'},class:'btn text-light mx-auto mb-3',style: 'background-color:rgb(212,15,174); scale:1.25'%> 
+</div><%=turbo_frame_tag 'meetgreet_form'%>

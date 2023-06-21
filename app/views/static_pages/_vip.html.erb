@@ -1,0 +1,17 @@
+  <h2 class="text-center">VIP package!</h2>
+
+<p>Fly to Riga to meet at least 5 women picked out by the matchmaker based on what you're looking for in a relationship.</p>
+
+<ul>
+<li><strong>At landing:</strong> You will receive the profiles of 20 latvian lovely women to choose from. <strong> Be clear about your goals.</strong> What are you looking for in a partner? What are your dealbreakers?</li>
+<li> <strong>At the hotel:</strong> You will get the planification of the 5 dates, so you can make the necessary adjusments to your fitting.</li>
+<li><strong>At the dates:</strong> Be yourself, be honest about what you are looking for and enjoy the experience of meeting your soulmate </li>
+</ul>
+
+<p>To receive the best experiencie of the matchmaking please be thorough when answering the question. Take your time, and think that you will be meeting your significant other.</p>
+
+<div class="container d-flex justify-content-center">
+
+<%=link_to 'V I P', new_user_path, data:{turbo_frame: 'vip_form'},class:'btn text-light mx-auto mb-3',style: 'background-color:rgb(212,15,174); scale:1.25'%> 
+</div>
+<%=turbo_frame_tag 'vip_form'%>

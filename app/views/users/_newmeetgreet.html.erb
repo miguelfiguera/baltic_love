@@ -1,0 +1,24 @@
+<div class="col container mx-auto">
+
+<div class="container" style='max-width: 400px'>
+<%=form_with model: @user do |f|%>
+<%=f.label :email, 'Email', class:'form-label'%>
+<%=f.email_field :email, placeholder: "example@mail.com",class:'form-control', required: true %>
+<%=f.label :name, 'Name', class:'form-label' %>
+<%=f.text_field :name,class:'form-control' %>
+<%=f.label :last_name, 'Last name', class:'form-label' %>
+<%=f.text_field :last_name,class:'form-control' %>
+<%=f.hidden_field :country, value: 'USA' %>
+<%=f.hidden_field :package, value: 'Meet & Greet' %>
+<%=f.label :phone, 'Phone', class:'form-label' %>
+<%=f.text_field :phone,class:'form-control' %>
+<%=f.label :question, 'What are you looking for in a partner?', class:'form-label' %>
+<%=f.text_field :question,class:'form-control' %>
+  <div class="container mx-auto my-3 col-3">
+
+<%=f.submit 'Submit',class:' btn text-light',style:'background-color:rgb(212,15,174); scale:1.25' %>
+  </div>
+
+<%end%>
+</div>
+</div>
