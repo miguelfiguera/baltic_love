@@ -25,6 +25,7 @@ class DataController < ApplicationController
 
     respond_to do |format|
       if @datum.save
+        UserMailer.with(user_data: @datum).new_user_mail.deliver_later
         format.html { redirect_to root_path, notice: "Datum was successfully created." }
         format.json { render :show, status: :created, location: @datum }
       else
