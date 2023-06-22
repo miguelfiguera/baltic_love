@@ -8,7 +8,7 @@ class Datum < ApplicationRecord
     
 
     scope :vip, -> { where(package: "V I P") }
-    scope :normal, -> { where(package: "Meet & Greet") }
+    scope :normal, -> { where(package:  "Meet & Greet") }
 
 
 end
