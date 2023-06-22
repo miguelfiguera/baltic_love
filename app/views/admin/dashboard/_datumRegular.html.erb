@@ -1,0 +1,20 @@
+<%@usersReg.each do |u|%>
+<div class="container border border-dark rounded-4 my-3" style="max-width:450px;"> 
+
+<h2 class="text-center">Customer: <%=u.name%> <%=u.last_name%>
+</h2>
+<p class='fw-bold'>ID: <%=u.id%></p>
+
+
+<p class='fw-bold'>Email: </p>
+<p><%=u.email%></p>
+<p class='fw-bold'>Phone: </p>
+<p><%=u.phone%></p>
+<p class='fw-bold' >Country: </p>
+<p><%=u.country%></p>
+<p class='fw-bold' >Selected Package: </p>
+<p><%=u.package%></p>
+<p class='fw-bold'>What are you looking for in a partner?:</p>
+<p><%=u.question%></p>
+</div>
+<%end%>
