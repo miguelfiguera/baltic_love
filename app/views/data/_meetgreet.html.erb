@@ -27,7 +27,7 @@
 <%=f.label :phone, 'Phone', class:'form-label' %>
 <%=f.text_field :phone,class:'form-control' %>
 <%=f.label :question, 'What are you looking for in a partner?', class:'form-label' %>
-<%=f.text_field :question,class:'form-control' %>
+<%=f.text_field :question,class:'form-control',style:'min-height:150px;' %>
 <br>
 
 <div class="form-check mx-auto">
@@ -39,6 +39,11 @@
 
 <%=f.radio_button :package, 'V I P', class:'form-check-input border border-dark' %>
 <%= f.label :package, "Select V I P",class:'form-check-label' %>
+</div>
+<div class="form-check mx-auto">
+
+<%=f.radio_button :package, 'Local Gems', class:'form-check-input border border-dark'%>
+<%= f.label :package, "Select Local Gems",class:'form-check-label' %>
 </div>
 
 
