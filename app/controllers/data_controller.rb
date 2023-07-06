@@ -8,6 +8,8 @@ class DataController < ApplicationController
 
   # GET /data/1 or /data/1.json
   def show
+    @datum=Datum.find(params[:id])
+
   end
 
   # GET /data/new
@@ -26,7 +28,7 @@ class DataController < ApplicationController
     respond_to do |format|
       if @datum.save
         UserMailer.with(user_data: @datum).new_user_mail.deliver_later
-        format.html { redirect_to root_path, notice: "Datum was successfully created." }
+        format.html { redirect_to datum_path(@datum), notice: "Your subscription was successfully created." }
         format.json { render :show, status: :created, location: @datum }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +41,7 @@ class DataController < ApplicationController
   def update
     respond_to do |format|
       if @datum.update(datum_params)
-        format.html { redirect_to datum_url(@datum), notice: "Datum was successfully updated." }
+        format.html { redirect_to datum_path(@datum), notice: "Datum was successfully updated." }
         format.json { render :show, status: :ok, location: @datum }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +55,7 @@ class DataController < ApplicationController
     @datum.destroy
 
     respond_to do |format|
-      format.html { redirect_to data_url, notice: "Datum was successfully destroyed." }
+      format.html { redirect_to root_path, notice: "Datum was successfully destroyed." }
       format.json { head :no_content }
     end
   end

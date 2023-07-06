@@ -51,9 +51,11 @@
 
   <div class="container d-flex justify-content-center my-3 col-3">
 
+<div data-turbo="false">
 <%=f.submit 'Submit',class:' btn text-light',style:'background-color:rgb(212,15,174); scale:1.25' %>
+</div>
 <%=link_to 'Cancel', static_pages_home_url, class:'btn btn-danger text-light ms-5', style:'scale:1.25;'%>
   </div>
 
-  </div>
 <% end %>
+  </div>
